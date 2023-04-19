@@ -2,6 +2,8 @@
 import React from 'react';
 import { useState } from 'react';
 
+
+
 const Header = ({ title, content }) => {
 const [isActive, setIsActive] = useState(false);
 
@@ -11,7 +13,8 @@ const [isActive, setIsActive] = useState(false);
           <div className="accordion-title" onClick={()=>setIsActive(!isActive)}>
             
             <div>{title}</div>
-            <div>{isActive ? '-' : '+'}</div>
+            { <div>{isActive ? '-' : '+'}</div> }
+            
             
           </div>
           {isActive && <div className="accordion-content">{content}</div>}
